@@ -1,9 +1,6 @@
 let readlineSync = require('readline-sync');
-let dia = readlineSync.question('Em que dia você nasceu? ');
-let mes = readlineSync.question('Em que mês você nasceu? ');
-
-mes = Number(mes);
-dia = Number(dia);
+let dia = readlineSync.questionInt('Em que dia você nasceu? ');
+let mes = readlineSync.questionInt('Em que mês você nasceu? ');
 
 if (dia >= 20 && mes == 1 || dia <= 18 && mes == 2) {
 
@@ -62,4 +59,6 @@ if (dia >= 22 && mes == 11 || dia <= 21 && mes == 12) {
 if (dia >= 22 && mes == 12 || dia <= 19 && mes == 1) {
 
     console.log('Seu signo é Capricórnio');
+} else {
+    console.log('Não consigo te dizer seu signo')
 }
